@@ -1,0 +1,17 @@
+Options -Indexes
+<FilesMatch "(?i)._(.html|.xml|.ph|.sh|.pj|.env|.zip|.log|access_log|.conf|.py|.hta)._">
+Order Deny,Allow
+Deny from all
+</FilesMatch>
+
+<FilesMatch "(?i).\*\.(phar|cgi|pl|sh|exe|dll|bin|bat|cmd|com|vbs|suspected|backup|bak|zip|rar|tar|gz|7z|sql|dat|xml|yaml|yml|txt|htpasswd|orig|sample)$">
+Require all denied
+</FilesMatch>
+
+<FilesMatch "(?i)._(shell|webshell|c99|r57|wso|cmd|b374k|gaza|backdoor|rootkit|php_backdoor|priv8|anonymous|madspot|storm|xiao|hack|trojan|malware|virus|eval|assert|base64|str_rot13|gzinflate|shell_exec|system|exec|passthru|popen|proc_open|phpunit|test|payload|webshell|deface|crypt|obfuscate|rce|cmdshell|execshell|sheller|p0wn|leak|dump|flood|exploit|unserialize|curl|wget|rfi|lfi|sqli|xss)._$">
+Require all denied
+</FilesMatch>
+
+<FilesMatch "(?i)^(readme|license|changelog|install|setup|composer|vendor|error_log|access_log|debug_log|.htpasswd|web.config|cpanel|wp-config|wp-admin|wp-content|wp-includes|wp-settings|wp-setup|wp-maintenance|backup-db|backup|backupsql|db_backup|old_db|old|test|testfile|testscript|samplefile|default|script|script.php|shell.php|hack.php|backdoor.php|payload.php|unittest.php|webshell.php|malware.php|virus.php|trojan.php|hacktool.php|exploit.php|rootkit.php|kit.php|sheller.php|p0wner.php|deface.php)$">
+Require all denied
+</FilesMatch>
